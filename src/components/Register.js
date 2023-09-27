@@ -8,10 +8,13 @@ export default function Register({ registered, setRegistered }) {
   const submit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:4000/auth/register", {
-        username,
-        password,
-      });
+      await axios.post(
+        "https://recipe-server-apguzhdor-levy-237.vercel.app/auth/register",
+        {
+          username,
+          password,
+        }
+      );
       navigate("/");
     } catch (error) {
       console.error(error);

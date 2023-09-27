@@ -10,10 +10,13 @@ export default function Login({ registered, setRegistered }) {
   const submit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:4000/auth/login", {
-        username,
-        password,
-      });
+      const response = await axios.post(
+        "https://recipe-server-apguzhdor-levy-237.vercel.app/auth/login",
+        {
+          username,
+          password,
+        }
+      );
       setCookies("access_token", response.data.token);
       window.localStorage.setItem("userId", response.data.userId);
       navigate("/");

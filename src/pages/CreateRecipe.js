@@ -35,7 +35,7 @@ export default function CreateRecipe() {
   const onSubmit = async (e) => {
     e.preventDefault();
     await axios.post(
-      "http://localhost:4000/recipes",
+      "https://recipe-server-apguzhdor-levy-237.vercel.app/recipes",
       { ...recipe },
       { headers: { authorization: cookies.access_token } }
     );
@@ -61,7 +61,7 @@ export default function CreateRecipe() {
         />
         <label>Ingredients</label>
         <button type="button" onClick={addIng} className="ingButton">
-          Add ingredients
+          Click to add ingredients
         </button>
         {recipe.ingredients.map((ing, i) => (
           <input

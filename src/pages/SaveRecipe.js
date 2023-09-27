@@ -10,7 +10,7 @@ export default function SaveRecipe() {
     const fetchSavedRecipes = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:4000/recipes/savedRecipes/${userID}`,
+          `https://recipe-server-apguzhdor-levy-237.vercel.app/recipes/savedRecipes/${userID}`,
           { headers: { authorization: cookies.access_token } }
         );
         setSavedRecipes(response.data.savedRecipes);

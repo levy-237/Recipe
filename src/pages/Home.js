@@ -13,7 +13,9 @@ export default function Home() {
   useEffect(() => {
     const fetch = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/recipes/");
+        const response = await axios.get(
+          "https://recipe-server-apguzhdor-levy-237.vercel.app/recipes/"
+        );
         setRecipes(response.data);
       } catch (error) {
         console.log(error);
@@ -22,7 +24,7 @@ export default function Home() {
     const savedFetch = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:4000/recipes/savedRecipes/ids/${userID}`
+          `https://recipe-server-apguzhdor-levy-237.vercel.app/recipes/savedRecipes/ids/${userID}`
         );
         setSavedRecipes(response.data.savedRecipes);
       } catch (error) {
@@ -36,7 +38,7 @@ export default function Home() {
   const saveRecipe = async (recipeID) => {
     try {
       const response = await axios.put(
-        "http://localhost:4000/recipes/",
+        "https://recipe-server-apguzhdor-levy-237.vercel.app/recipes/",
         {
           recipeID,
           userID,
