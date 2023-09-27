@@ -1,13 +1,230 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background-color: rgb(231, 230, 230);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+}
+.navbar a {
+  font-size: 2.5vh;
+  color: rgb(0, 82, 190);
+  font-family: Courier, monospace;
+  text-decoration: none;
+  margin: 2vh;
+  transition: 1s;
+}
+.navbar a:hover {
+  color: black;
+}
+.navbar button {
+}
+
+.auth {
+  margin-top: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signingForm {
+  padding: 1vh 2.5vh;
+  border: 1px solid rgba(128, 128, 128, 0.084);
+  font-family: serif;
+  font-size: 2.5vh;
+  font-weight: lighter;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.signingForm h2 {
+  color: rgb(1, 38, 77);
+}
+.signingForm h2:hover {
+  color: rgb(2, 76, 154);
+}
+.signingForm span {
+  color: rgb(4, 100, 255);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.signingForm label {
+  font-family: Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 400;
+  color: rgb(36, 35, 35);
+}
+.signingForm label:hover {
+  color: rgb(2, 76, 154);
+}
+.signingForm input {
+  color: rgb(1, 28, 56);
+  margin-top: 1.3vh;
+  margin-bottom: 1.3vh;
+  border: 1px solid rgba(128, 128, 128, 0.224);
+  height: 4vh;
+  width: 35vh;
+}
+
+.signingForm button {
+  color: white;
+  margin-top: 3vh;
+  background-color: rgb(3, 125, 255);
+  border: 0;
+  width: 60%;
+  height: 2.3rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: 0.5s;
+}
+.signingForm button:hover {
+  background-color: rgb(2, 76, 154);
+}
+.ingredients {
+  display: flex;
+}
+.recHeader {
+  margin-top: 5vh;
+  text-align: center;
+}
+.recContainer {
+  justify-content: center;
+  align-items: start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5vh;
+}
+.recipeCard {
+  border: 1px solid rgba(128, 128, 128, 0.21);
+  border-radius: 2vh;
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vh;
+}
+.recipeCard p {
+  width: 90%;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 500;
+  color: rgb(0, 16, 33);
+  transition: 1s;
+}
+.recipeCard img {
+  border-radius: 2vh 2vh 0vh 0vh;
+  object-fit: cover;
+  width: 100%;
+  height: 28vh;
+}
+.recipeCard h2 {
+  color: rgb(1, 36, 73);
+  font-family: "Times New Roman", Times, serif;
+  transition: 1s;
+}
+.ingredients {
+  width: 100%;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+.savedRecipes {
+  margin-top: 5vh;
+  text-align: center;
+}
+.recipeCard span {
+  margin-bottom: 1vh;
+}
+.recipeCard h2:hover {
+  color: rgb(1, 74, 152);
+}
+.recipeCard p:hover {
+  color: rgb(1, 74, 152);
+}
+.recipeCardLow {
+  margin-top: 2vh;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.createRec {
+  margin-top: 8vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.createRec input {
+  border-radius: 0.5vh;
+  color: rgb(1, 28, 56);
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  border: 1px solid rgba(128, 128, 128, 0.224);
+  height: 4vh;
+  width: 35vh;
+}
+.createRec .instructionInput {
+  height: 9.5vh;
+}
+.createRec label {
+  margin-bottom: 0.5vh;
+  font-family: Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 400;
+  color: rgb(36, 35, 35);
+}
+header {
+  /* style header for create */
+  letter-spacing: 0.7vh;
+  font-family: serif;
+  font-size: 6vh;
+  margin-top: 4vh;
+  margin-bottom: 3vh;
+  text-align: center;
+}
+.createRec .ingButton {
+  font-size: 1.8vh;
+  font-family: serif;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  height: 4.5vh;
+  width: 35vh;
+  background-color: rgb(0, 62, 129);
+  border: 0;
+  color: azure;
+  cursor: pointer;
+  transition: 1s;
+  border-radius: 0.4vh;
+}
+.createRec .ingButton:hover {
+  background-color: rgb(2, 76, 154);
+  border-radius: 1.3vh;
+}
+.createRec label:hover {
+  color: rgb(0, 88, 183);
+}
+.createButton {
+  font-size: medium;
+  font-family: serif;
+  width: 20vh;
+  height: 4.6vh;
+  background-color: aliceblue;
+  margin-top: 1.5vh;
+  cursor: pointer;
+  transition: 1s;
+  border: 2px solid grey;
+}
+.createButton:hover {
+  background-color: rgb(45, 107, 252);
+  color: aliceblue;
+  border: 0;
+}
+@media (max-width: 451px) {
+  .recipeCard img {
+    width: 90%; /* Reset the max-width to 100% for smaller screens */
+  }
 }
