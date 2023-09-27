@@ -20,8 +20,6 @@ body {
 .navbar a:hover {
   color: black;
 }
-.navbar button {
-}
 
 .auth {
   margin-top: 15vh;
@@ -169,7 +167,10 @@ body {
   width: 35vh;
 }
 .createRec .instructionInput {
-  height: 9.5vh;
+  height: 7.5vh;
+  text-align: top;
+  white-space: normal;
+  padding: 0;
 }
 .createRec label {
   margin-bottom: 0.5vh;
