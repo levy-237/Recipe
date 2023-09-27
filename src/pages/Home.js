@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { BsFillBookmarkFill } from "react-icons/bs";
-import { BiBookmark } from "react-icons/bi";
+import { BsFillHeartFill } from "react-icons/bs";
+import { BiHeart } from "react-icons/bi";
 import { IconContext } from "react-icons";
 import axios from "axios";
 import { useGetUserId } from "../hooks/useGetUserId";
@@ -71,13 +71,13 @@ export default function Home() {
 
           {savedRecipes.includes(rec._id) ? (
             <IconContext.Provider value={{ size: "1.2rem" }}>
-              <BsFillBookmarkFill />
+              <BsFillHeartFill />
             </IconContext.Provider>
           ) : null}
           {savedRecipes.includes(rec._id) ? null : (
             <span className="save" onClick={() => saveRecipe(rec._id)}>
-              <IconContext.Provider value={{ size: "1.2rem" }}>
-                <BiBookmark />
+              <IconContext.Provider value={{ size: "1.5rem" }}>
+                <BiHeart />
               </IconContext.Provider>
             </span>
           )}
