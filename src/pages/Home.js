@@ -59,7 +59,7 @@ export default function Home() {
         <h2>{rec.name}</h2>
         <p>{rec.instruction}</p>
         <span>
-          <b>ingredients:</b>
+          <b>Ingredients:</b>
         </span>
         <div className="ingredients">
           {ing.map((inst, i) => (
