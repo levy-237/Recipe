@@ -6,6 +6,7 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Auth from "./pages/Auth";
@@ -22,7 +23,11 @@ function App() {
       </Route>
     )
   );
-  return <RouterProvider router={router} />;
+  return;
+  <>
+    <RouterProvider router={router} />
+    <Analytics />
+  </>;
 }
 
 export default App;
